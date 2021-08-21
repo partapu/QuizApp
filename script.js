@@ -5,6 +5,8 @@ const question = document.querySelector(".Question");
 const startContainer = document.querySelector(".startContainer");
 let nextbtn = document.querySelector(".Next");
 const body = document.querySelector("body");
+const time = document.querySelector(".time");
+// const timerContainer = document.querySelector(".timer");
 
 //Question class
 class Question {
@@ -71,9 +73,17 @@ questions.push(question7);
 let currentQuestion = 0;
 let totalQuestion = questions.length;
 let correct = 0;
-
+let seconds = 0;
+let interval;
 //Generate html markup for question
+const timer = function () {
+  time.textContent = `${seconds++} sec`;
+};
 const generateMarkUp = function (obj) {
+  if (!interval) {
+    timer();
+    interval = setInterval(timer, 1000);
+  }
   const html = `
     <p class="question-text">${obj.question}</p>
     <div class="options-container">
@@ -147,9 +157,13 @@ nextbtn.addEventListener("click", function (e) {
     ${correct}/${totalQuestion} Correct</h1>
      </div>`;
     body.insertAdjacentHTML("beforeend", html2);
-    renderResults();
+    clearInterval(interval);
+    console.log(interval);
+
     return;
   }
+  // if (timerContainer.classList.contains("hidden"))
+  //   timerContainer.classList.remove("hidden");
   generateMarkUp(questions[currentQuestion]);
 
   // Validate Answer

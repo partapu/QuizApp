@@ -142,10 +142,38 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);
   opacity: 0.8;
+  transition: all 0.2s;
 }
+.results:hover {
+  transform: translateY(-1.5px) scale(1.01);
+}
+
 @media only screen and (max-width: 50rem) {
   .results {
     height: 15%;
     width: 80%;
   }
+}
+.timer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 15%;
+  width: 30%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  transition: all 0.2s;
+}
+@media only screen and (max-width: 50rem) {
+  .timer {
+    height: 15%;
+    width: 80%;
+  }
+}
+.timer:hover {
+  transform: translateY(-1.5px) scale(1.01);
 }
