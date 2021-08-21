@@ -156,6 +156,9 @@ nextbtn.addEventListener("click", function (e) {
   const options = Array.from(document.querySelectorAll(".options"));
   for (let radio in options) {
     options[radio].onclick = function () {
+      for (let rad in options) {
+        options[rad].disabled = true;
+      }
       var selector = "label[for=" + this.id + "]";
       var label = document.querySelector(selector);
       var text = label.textContent.trim();
