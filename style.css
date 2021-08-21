@@ -48,6 +48,12 @@ body {
   opacity: 0.8;
   transition: all 0.2s;
 }
+@media only screen and (max-width: 400px) {
+  .Container {
+    height: 60%;
+    width: 80%;
+  }
+}
 .Container:hover {
   transform: translateY(-1.5px) scale(1.01);
 }
@@ -136,4 +142,10 @@ body {
   border-radius: 0.5rem;
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);
   opacity: 0.8;
+}
+@media only screen and (max-width: 400px) {
+  .results {
+    height: 20%;
+    width: 80%;
+  }
 }
