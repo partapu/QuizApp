@@ -48,7 +48,7 @@ body {
   opacity: 0.8;
   transition: all 0.2s;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 50rem) {
   .Container {
     height: 60%;
     width: 80%;
@@ -78,7 +78,7 @@ body {
   border: none;
   transition: all 0.2s;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 50rem) {
   .Container .btn {
     font-size: 2rem;
   }
@@ -97,7 +97,7 @@ body {
 .question-text {
   font-size: 2rem;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 50rem) {
   .question-text {
     font-size: 1.5rem;
   }
@@ -143,7 +143,7 @@ body {
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.2);
   opacity: 0.8;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 50rem) {
   .results {
     height: 20%;
     width: 80%;
